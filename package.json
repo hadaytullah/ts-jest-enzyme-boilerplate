@@ -1,0 +1,55 @@
+{
+  "dependencies": {
+    "@types/enzyme-adapter-react-16": "^1.0.6",
+    "@types/jest": "^26.0.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "jest": "^26.0.1",
+    "ts-jest": "^26.1.0"
+  },
+  "jest": {
+    "snapshotSerializers": [
+      "enzyme-to-json"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "transform": {
+      "\\.(ts|tsx)$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "setupTestFrameworkScriptFile": "<rootDir>src/setupTests.ts",
+    "globals": {
+      "ts-jest": {
+        "diagnostics": {
+          "ignoreCodes": [
+            151001
+          ]
+        }
+      }
+    },
+    "testMatch": [
+      "<rootDir>/src/**/*.test.tsx"
+    ],
+    "moduleNameMapper": {},
+    "coverageReporters": [
+      "json",
+      "lcov",
+      "text",
+      "clover",
+      "cobertura",
+      "html"
+    ],
+    "cache": false,
+    "silent": true,
+    "testResultsProcessor": "<rootDir>/node_modules/jest-junit-reporter"
+  },
+  "devDependencies": {
+    "enzyme-to-json": "^3.5.0",
+    "jest-junit-reporter": "^1.1.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "typescript": "^3.8.3"
+  }
+}
